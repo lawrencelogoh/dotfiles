@@ -1,0 +1,46 @@
+super + Escape
+	pkill -USR1 -x sxhkd
+super + shift + Escape
+	kill $(pidof dwm)
+super + F2
+	sudo -A reboot
+super + F3
+	sudo -A zzz
+super + shift + Return
+	st
+super + f
+	dmenufm
+super + {F10,F9}	
+	light {-A 10,-U 10}
+super + s
+	status
+super + w 
+	nmtui
+super + shift + w
+	$BROWSER
+super + Print 
+	maimpick
+super + shift + b
+	ocbk
+
+# Music	
+super + {F7,F8}
+	mocp {-r,-f}
+super + F6
+	mocp -j 0s
+super + F5
+	mocp -G
+super + {bracketleft,bracketright}
+	mocp -k {-15,+15}
+
+super + e
+      emacsclient -c
+
+# wmutils
+# move windows around
+#super + {h,j,k,l}
+#      wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+# resize windows
+#super + alt + {h,j,k,l}
+#      wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
