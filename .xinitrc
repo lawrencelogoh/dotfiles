@@ -4,7 +4,8 @@ sxhkd &
 while true; do
     statusbar 
     lowbat 
+    sleep 1m
 done &
 setbg &
-spotifyd --no-daemon &
+#spotifyd --no-daemon &
 exec dwm

@@ -17,5 +17,5 @@ MEM(){
 }
 
 xsetroot -name "$(MEM) $(DISK) $(BAT) $(DATE)"
-sleep 1m
+
 
