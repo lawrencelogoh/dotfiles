@@ -5,15 +5,15 @@ echo "[$(date +"%a %d-%m-%y %R")]"
 }
 BAT(){
 bat=$(cat /sys/class/power_supply/BAT0/capacity)
-echo -e "[🔋: $bat%]"
+echo -e "[BAT: $bat%]"
 }
 DISK(){
     d=$(df -h $HOME | awk '/[0-9]/ {print $3 "/" $2}')
-    echo "[💾: $d]"
+    echo "[DISK: $d]"
 }
 MEM(){
     mem=$(free -m | awk '/Mem/{printf "%.2f/%.2f %s",$3/1024,$2/1024,"GB"}')
-    echo "[🐏: $mem]"
+    echo "[MEM: $mem]"
 }
 
 xsetroot -name "$(MEM) $(DISK) $(BAT) $(DATE)"
