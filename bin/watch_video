@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+case "$(printf "audio\\n360p\\n480p\\n720p\\n1080p" | dmenu -l 5 -i -p "What resolution do you want to watch in?")" in
+	"audio") mpv $1 --ytdl-format="ba";;
+	"360p")  mpv $1 --ytdl-format="bv*[height<=360]+ba/b[height<=360] / wv*+ba/w";;
+	"480p")  mpv $1 --ytdl-format="bv*[height<=480]+ba/b[height<=480] / wv*+ba/w";;
+	"720p")  mpv $1 --ytdl-format="bv*[height<=720]+ba/b[height<=720] / wv*+ba/w";;
+	"1080p") mpv $1 --ytdl-format="bv*[height<=1080]+ba/b[height<=1080] / wv*+ba/w";;
+esac
