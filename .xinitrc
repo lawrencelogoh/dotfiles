@@ -7,5 +7,7 @@ while true; do
     sleep 1m
 done &
 setbg &
-#spotifyd --no-daemon &
+pulseaudio --daemonize=no --exit-idle-time=-1 &
+spotifyd --no-daemon &
 exec dwm
+

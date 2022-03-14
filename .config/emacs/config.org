@@ -18,7 +18,7 @@
      (require 'use-package-ensure)
      (setq use-package-always-ensure t)
 
-     ;; packages
+     ;; appearance
      (use-package modus-themes
 	    :init
 	    (setq modus-themes-slanted-constructs t
@@ -33,15 +33,16 @@
      (use-package python-mode)
      (use-package haskell-mode)
      (use-package rust-mode)
-
-     ;; add other modes
-     (use-package markdown-mode)
+     (use-package pydoc)
      (use-package reformatter)
      (use-package eglot) ;; lsp client
      (use-package emmet-mode)
      (use-package magit) ; an interface to git
      (use-package htmlize)
 
+     ;; misc
+     (use-package markdown-mode)
+     (use-package elcord)
    #+end_src
    
 ** Quality of life
@@ -56,21 +57,24 @@
   ;; function to reload configuration
   (defun config-reload ()
       (interactive)
-      (org-babel-load-file (expand-file-name "~/.emacs.d/config.org")))
+      (org-babel-load-file (expand-file-name "~/.config/emacs/config.org")))
 
   ;; refresh buffer when file is modified on disk
   (global-auto-revert-mode 1)
 
   ;; font
   (add-to-list 'default-frame-alist
-	       '(font . "Fira Code Retina-14"))
-  (setq backup-directory-alist '(("." . "~/.emacs.d/.bak"))
+	       '(font . "Hack-14"))
+  (setq backup-directory-alist '(("." . "~/.bak"))
 	backup-by-copying t    
 	version-control t      
 	delete-old-versions t  
 	kept-new-versions 5   
 	kept-old-versions 2    
 	)
+  ;; flex on disord
+  (require 'elcord)
+  (elcord-mode)
 #+end_src
 ** Writing
 *** Spellcheck
@@ -136,7 +140,13 @@
       (add-hook 'go-mode-hook 'go-format-on-save-mode)
       (add-hook 'prog-mode-hook 'py-format-on-save-mode)
     #+end_src
-** Keybindings
+*** LSP
+*** Keybindings
+** Productivity
+*** Email
+*** Calendar
+*** Agenda
+** Global Keybindings
    #+begin_src emacs-lisp
      (global-set-key (kbd "C-c c") 'org-capture)
      (global-set-key (kbd "C-c r") 'config-reload)

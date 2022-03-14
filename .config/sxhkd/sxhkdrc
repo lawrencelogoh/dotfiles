@@ -5,7 +5,7 @@ super + shift + Escape
 super + F2
 	sudo -A reboot
 super + F3
-	sudo -A zzz
+      	doas zzz
 super + shift + Return
 	st
 super + f
