@@ -34,6 +34,7 @@
      (use-package haskell-mode)
      (use-package rust-mode)
      (use-package pydoc)
+     (use-package company) ;; for completion
      (use-package reformatter)
      (use-package eglot) ;; lsp client
      (use-package emmet-mode)
@@ -75,6 +76,7 @@
   ;; flex on disord
   (require 'elcord)
   (elcord-mode)
+  (setq elcord-quiet t)
 #+end_src
 ** Writing
 *** Spellcheck
@@ -141,11 +143,13 @@
       (add-hook 'prog-mode-hook 'py-format-on-save-mode)
     #+end_src
 *** LSP
+    #+begin_src emacs-lisp
+      (add-hook 'python-mode-hook 'eglot-ensure)
+      (add-hook 'go-mode-hook 'eglot-ensure)
+      (add-hook 'js-mode-hook 'eglot-ensure)
+    #+end_src
 *** Keybindings
-** Productivity
-*** Email
-*** Calendar
-*** Agenda
+
 ** Global Keybindings
    #+begin_src emacs-lisp
      (global-set-key (kbd "C-c c") 'org-capture)
