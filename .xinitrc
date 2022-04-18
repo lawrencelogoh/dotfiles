@@ -1,3 +1,4 @@
+clipmenud &
 emacs --daemon &
 syncthing --no-browser &
 sxhkd &
@@ -11,4 +12,6 @@ pipewire &
 pipewire-pulse &
 spotifyd --no-daemon &
 exec dwm
+
+
 

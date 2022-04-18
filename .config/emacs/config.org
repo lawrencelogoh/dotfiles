@@ -43,6 +43,10 @@
 
      ;; misc
      (use-package markdown-mode)
+     (use-package org-tree-slide
+       :custom
+       (org-image-actual-width nil))
+     (use-package ox-reveal)
      (use-package elcord)
    #+end_src
    
@@ -102,7 +106,6 @@
       (setq py-format-command "black")
       (reformatter-define py-format
 	:program py-format-command
-	:args '("")
 	      :lighter " PF")
 
       ;; go 
