@@ -1,5 +1,5 @@
 * My emacs config
- 
+
 ** Install packages
    #+begin_src emacs-lisp
      (require 'package)
@@ -40,6 +40,8 @@
      (use-package emmet-mode)
      (use-package magit) ; an interface to git
      (use-package htmlize)
+     
+
 
      ;; misc
      (use-package markdown-mode)
@@ -49,7 +51,7 @@
      (use-package ox-reveal)
      (use-package elcord)
    #+end_src
-   
+  
 ** Quality of life
 #+begin_src emacs-lisp
   (setq inhibit-startup-message t)
@@ -62,7 +64,8 @@
   ;; function to reload configuration
   (defun config-reload ()
       (interactive)
-      (org-babel-load-file (expand-file-name "~/.config/emacs/config.org")))
+      (org-babel-load-file (expand-file-name "~/.config/emacs/config.org"))
+      (org-babel-load-file (expand-file-name "~/.config/emacs/personal.org")))
 
   ;; refresh buffer when file is modified on disk
   (global-auto-revert-mode 1)
@@ -91,6 +94,7 @@
       (add-hook 'text-mode-hook 'flyspell-mode)
       ;; enable spellcheck for comments in prog-mode
       (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+      
     #+end_src
 ** Programming
 *** Code formatting
@@ -102,13 +106,15 @@
 	:program go-format-command
 	:lighter " GF")
 
-      ;; py 
+      ;; py
+
       (setq py-format-command "black")
       (reformatter-define py-format
 	:program py-format-command
-	      :lighter " PF")
+	:args '("-")
+	:lighter " PF")
 
-      ;; go 
+      ;; haskell
       (setq hs-format-command "hsfmt")
       (reformatter-define hs-format
 	:program hs-format-command
@@ -123,7 +129,7 @@
 	:lighter " RF")
 
       ;; c 
-	    (setq c-format-command "cfmt")
+      (setq c-format-command "cfmt")
       (reformatter-define c-format
 	:program c-format-command
 	:args '("format")
@@ -147,11 +153,14 @@
     #+end_src
 *** LSP
     #+begin_src emacs-lisp
+      (add-hook 'prog-mode-hook 'company-mode)
+
       (add-hook 'python-mode-hook 'eglot-ensure)
       (add-hook 'go-mode-hook 'eglot-ensure)
       (add-hook 'js-mode-hook 'eglot-ensure)
     #+end_src
 *** Keybindings
+
 
 ** Global Keybindings
    #+begin_src emacs-lisp
