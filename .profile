@@ -1,10 +1,9 @@
-_JAVA_AWT_WM_NONREPARENTING=1
-GOPATH=$HOME/.local/go
-XDG_CONFIG_HOME=$HOME/config
 PS1='[\u@\h \W]\$ '
-EDITOR="mg"
-BROWSER="firefox"
 
-PATH=$PATH:$HOME/bin:/opt/:$HOME/.local/bin:$HOME/.local/npm-g/bin:$GOPATH/bin:
-
-alias ls='ls --color=auto'
+export _JAVA_AWT_WM_NONREPARENTING=1
+export GOPATH=$HOME/.local/go
+export XDG_CONFIG_HOME=$HOME/.config/$(hostname)
+export XDG_CONFIG_DIRS=$HOME/.config/:/etc/xdg:
+export EDITOR="mg"
+export BROWSER="firefox"
+export PATH=$HOME/bin:$HOME/bin/$(hostname):$GOPATH/bin:$PATH:
