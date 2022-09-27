@@ -1,4 +1,5 @@
 . ~/.profile 
+. ~/.kshrc
 emacs --daemon &
 sxhkd &
 while true; do
