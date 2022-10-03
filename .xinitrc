@@ -1,11 +1,11 @@
 . ~/.profile 
-. ~/.kshrc
+. ~/.bashrc
 emacs --daemon &
 sxhkd &
 while true; do
     statusbar 
     lowbat 
-    sleep 60
+    sleep 1m
 done &
 setbg &
 exec dwm

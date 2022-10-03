@@ -3,10 +3,7 @@
 DATE(){
 echo "[$(date +"%a %d-%m-%y %R")]"
 }
-BAT(){
-bat=$(apm -l)
-echo -e "[BAT: $bat%]"
-}
+
 DISK(){
     d=$(df -h $HOME | awk '/[0-9]/ {print $3 "/" $2}')
     echo "[DISK: $d]"
@@ -16,6 +13,6 @@ MEM(){
     echo "[MEM: $mem]"
 }
 
-xsetroot -name "$(MEM) $(DISK) $(BAT) $(DATE)"
+xsetroot -name "$(MEM) $(DISK) $(DATE)"
 
 
