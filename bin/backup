@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+  then
+      echo "No argument supplied"
+      exit
+fi
+
+destination=$1
+
+directories=(
+    "bin"
+    "documents"
+    "downloads"
+    "lms"
+    "media"
+    "pictures"
+    "projects"
+    "repos"
+)
+
+for dir in "${directories[@]}"; do
+    mkdir -p "$destination"/"$dir"
+    rsync -a --info=progress2 "$HOME"/"$dir"/  "$destination"/"$dir"
+done
