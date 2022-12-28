@@ -1,13 +1,11 @@
 . ~/.profile 
-. ~/.bashrc
 emacs --daemon &
 sxhkd &
-clipmenud &
 syncthing --no-browser &
 while true; do
     statusbar 
     lowbat 
-    sleep 1m
+    sleep 60
 done &
 setbg &
 exec dwm

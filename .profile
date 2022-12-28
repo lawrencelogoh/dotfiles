@@ -12,3 +12,4 @@ export XDG_CONFIG_HOME="$HOME/.config/"
 export EDITOR="mg"
 export BROWSER="firefox"
 export PATH=$HOME/bin:$HOME/bin/$(hostname):$HOME/.local/bin:$ZIGPATH:$GOPATH:$FLUTTERPATH:$PATH:
+export TERM="st-256color"
