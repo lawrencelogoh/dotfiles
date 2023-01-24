@@ -18,13 +18,18 @@ $ git pull origin master
 You should have all the files after that.
 
 ## Optional Steps
-To install all the programs I normally install
+- Install all the programs I normally install
 ```bash
 # pkg_add -l .packages
 ```
-
+- Get my emacs config too
+```bash
+git clone https://github.com/lawrencelogoh/dotemacs ~/.config/emacs
+```
 # Notes
 - If you want to use startx instead of xenodm rename .xsession to .xinitrc
+- There are folders in `bin` that are named according to the system they're on.
+zangetsu is for my openbsd system, wabisuke is for my void linux system.
 - My build of dwm assumes that your terminal is st and your launcher is dmenu
 
 [Why OpenBSD?](https://lawrencelogoh.com/blog/why-openbsd.html)

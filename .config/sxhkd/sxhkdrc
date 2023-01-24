@@ -4,3 +4,7 @@ super + Print
 	maimpick
 super + e
       emacsclient -c
+super + F6
+      sndioctl output.level=-0.1
+super + F7
+      sndioctl output.level=+0.1 
