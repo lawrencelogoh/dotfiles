@@ -8,7 +8,5 @@ while true; do
     sleep 60
 done &
 setbg &
-exec dwm
-
-
-
+# exec dwm
+exec dbus-launch --exit-with-session --sh-syntax dwm
