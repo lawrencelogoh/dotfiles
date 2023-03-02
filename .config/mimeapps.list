@@ -13,6 +13,7 @@ x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 video/webm=mpv.desktop
 x-scheme-handler/webcal=chromium-browser.desktop
+application/zip=org.pwmt.zathura.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;

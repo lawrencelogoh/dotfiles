@@ -8,5 +8,7 @@ while true; do
     sleep 60
 done &
 setbg &
-# exec dwm
+clipmenud &
+remaps &
+compton -f --backend glx --vsync opengl-swc &
 exec dbus-launch --exit-with-session --sh-syntax dwm
