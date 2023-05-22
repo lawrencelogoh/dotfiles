@@ -2,6 +2,7 @@ export LANG="en_US.UTF-8"
 export ENV=$HOME/.kshrc
 export TERM="st-256color"
 export XDG_CONFIG_HOME="$HOME/.config/"
+export XDG_RUNTIME_DIR="/var/run/user/`id -u`"
 export XDG_DATA_HOME="$HOME/.local/share"
 export EDITOR="mg"
 export BROWSER="firefox"
