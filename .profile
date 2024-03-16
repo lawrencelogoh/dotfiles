@@ -12,10 +12,10 @@ export XDG_CONFIG_HOME="$HOME/.config/"
 export XDG_DATA_HOME="$HOME/.local/share"
 export EDITOR="mg"
 export BROWSER="firefox"
-export GOPATH="$HOME/.local/go/"
+export GOPATH="$HOME/.local/go"
+export GOBIN="$GOPATH/bin/"
 export RUSTUP_HOME="$HOME/.local/rustup"
 export CARGO_HOME="$HOME/.local/cargo"
-
-export PATH=$HOME/bin:$HOME/bin/$(hostname):$HOME/.local/bin:$PATH:
+export PATH=$HOME/bin:$HOME/bin/flatpaks:$HOME/bin/$(hostname):$HOME/.local/bin:$GOBIN:$PATH:
 
 . "/home/larry/.local/cargo/env"
