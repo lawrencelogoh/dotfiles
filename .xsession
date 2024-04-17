@@ -10,5 +10,5 @@ done &
 setbg &
 clipmenud &
 remaps &
-compton -f --backend glx --vsync opengl-swc &
+picom -f --backend glx --vsync --no-frame-pacing &
 exec dbus-launch --exit-with-session --sh-syntax dwm

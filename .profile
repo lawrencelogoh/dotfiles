@@ -18,4 +18,4 @@ export RUSTUP_HOME="$HOME/.local/rustup"
 export CARGO_HOME="$HOME/.local/cargo"
 export PATH=$HOME/bin:$HOME/bin/flatpaks:$HOME/bin/$(hostname):$HOME/.local/bin:$GOBIN:$PATH:
 
-. "/home/larry/.local/cargo/env"
+
