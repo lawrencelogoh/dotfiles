@@ -4,7 +4,7 @@ DATE(){
 echo "[$(date +"%a %d-%m-%y %R")]"
 }
 BAT(){
-bat=$(apm -l)
+bat=$(cat /sys/class/power_supply/BAT0/capacity)
 echo -e "[BAT: $bat%]"
 }
 DISK(){

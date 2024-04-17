@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+batdir=/sys/class/power_supply/BAT0/
+
+bat_lvl=$(cat $batdir/capacity)
+state=$(cat $batdir/status)
+
+if [[ $bat_lvl -lt 20 && $state == 'Discharging' ]]
+then 
+	notify-send -u critical "Low battery, plug in your computer or suspend"
+fi	
