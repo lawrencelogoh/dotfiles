@@ -18,4 +18,4 @@ export CARGO_HOME="$HOME/.local/cargo"
 
 export PATH=$HOME/bin:$HOME/bin/$(hostname):$HOME/.local/bin:$PATH:
 
-. "/home/larry/.local/cargo/env"
+
