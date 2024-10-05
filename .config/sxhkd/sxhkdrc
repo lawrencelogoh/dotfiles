@@ -8,3 +8,5 @@ super + F6
       sndioctl output.level=-0.1
 super + F7
       sndioctl output.level=+0.1 
+super + F2
+      maimpick

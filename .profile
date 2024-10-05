@@ -14,8 +14,10 @@ export EDITOR="mg"
 export BROWSER="firefox"
 export GOPATH="$HOME/.local/go"
 export GOBIN="$GOPATH/bin/"
+export FLYCTL_INSTALL="$HOME/.fly"
+export FLYBIN="$FLYCTL_INSTALL/bin/"
 export RUSTUP_HOME="$HOME/.local/rustup"
 export CARGO_HOME="$HOME/.local/cargo"
-export PATH=$HOME/bin:$HOME/bin/flatpaks:$HOME/bin/$(hostname):$HOME/.local/bin:$GOBIN:$PATH:
-
-
+export PATH=$HOME/bin:$HOME/bin/flatpaks:$HOME/bin/$(hostname):$HOME/.local/bin:$GOBIN:$FLYBIN/:$PATH:
+export PGDATA="$HOME/postgres"
+export VITE_PORT=5173

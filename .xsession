@@ -9,6 +9,9 @@ while true; do
 done &
 setbg &
 clipmenud &
+dunst &
 remaps &
 picom -f --backend glx --vsync --no-frame-pacing &
+xrdb ~/.Xresources &
+autostart &
 exec dbus-launch --exit-with-session --sh-syntax dwm
